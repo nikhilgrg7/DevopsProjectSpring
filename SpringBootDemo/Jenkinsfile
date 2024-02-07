@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout the source code from your version control system (e.g., Git)
+                git 'https://github.com/nikhilgrg7/DevopsProjectSpring.git'
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                // Build the Spring Boot application using Maven
+                bat 'mvn clean package'
+            }
+        }
+        
+        stage('Deploy') {
+            steps {
+                // Deploy the application using Docker (replace with your Docker commands)
+                bat 'docker build -t docker .'
+                bat 'docker run -d -p 8080:8080 docker'
+            }
+        }
+    }
+}
