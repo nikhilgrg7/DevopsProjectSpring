@@ -2,7 +2,7 @@ pipeline{
     agent any
  tools {
         maven 'maven'
-        jdk 'Oracle JDK 11'
+        jdk 'Oracle JDK 17'
     }
     stages{
         stage('checkout'){
