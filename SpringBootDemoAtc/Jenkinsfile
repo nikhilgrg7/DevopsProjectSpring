@@ -20,7 +20,7 @@ pipeline{
         stage ('SonarQube Analysis') {
         steps{
         withSonarQubeEnv('sonarqube-8.9.2') {
-        -Dsonar.projectKey=jenkins-pipeline-integrate \
+        bat '-Dsonar.projectKey=jenkins-pipeline-integrate \'
         bat 'mvn sonar:sonar'
                 }
         }
