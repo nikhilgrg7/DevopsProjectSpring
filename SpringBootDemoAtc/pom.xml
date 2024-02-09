@@ -18,7 +18,7 @@
 	</properties>
 	<properties>
     <sonar.login>admin</sonar.login>
-    <sonar.password.secured>sqp_d6070991b3dc34365964f6afc7bff12d4f853755</sonar.password.secured>
+    <sonar.password.secured>root</sonar.password.secured>
 </properties>
 	<dependencies>
 		<dependency>
