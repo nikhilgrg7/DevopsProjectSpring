@@ -17,5 +17,12 @@ pipeline{
                bat 'mvn package'
             }
         }
-    }
+        stage('Scan SonarQube'){
+            steps {
+                withSonarOubeEnv(installationName: "sql') {
+                    bat 'mvnw clean org.sonarsoirce.scanner.maven:sonar-maven-plugin:3.9.0.2155:sonar'
+                }
+    }    
 }
+    }
+   }
