@@ -22,7 +22,7 @@ pipeline{
             script{
                 withSonarQubeEnv('sonarqube-8.9.2') {
                     sonarCredentials = credentials('sqp_d6070991b3dc34365964f6afc7bff12d4f853755')
-                             withCredentials([string(credentialsId: 'sqp_d6070991b3dc34365964f6afc7bff12d4f853755', variable: 'sonarqube')]) {
+                             withCredentials([string(credentialsId: 'sonarqube', variable: 'sonarqube')]) {
                                  sh 'mvn sonar:sonar -Dsonar.login=admin -Dsonar.password.secured=sqp_d6070991b3dc34365964f6afc7bff12d4f853755'
                              }
                 }
