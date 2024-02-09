@@ -19,7 +19,7 @@ pipeline{
         }
         stage('Scan SonarQube'){
             steps {
-                withSonarOubeEnv(installationName: 'sql') {
+                withSonarOubeEnv(installationName: 'sq1') {
                     bat 'mvnw clean org.sonarsoirce.scanner.maven:sonar-maven-plugin:3.9.0.2155:sonar'
                 }
     }    
